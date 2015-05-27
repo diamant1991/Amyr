@@ -25,9 +25,7 @@
 	cursor: default;
 }
 .highslide-image {
-	border-width: 2px;
-	border-style: solid;
-	border-color: white;
+	border:5px solid #e8e8e8;
 	background: gray;
 }
 .highslide-wrapper, .highslide-outline {
@@ -827,4 +825,7 @@ a.highslide-credits:hover i {
 }
 .highslide-thumbstrip-float .highslide-marker {
 	display: none;
+}
+.highslide-container td{
+	background: none !important;
 }

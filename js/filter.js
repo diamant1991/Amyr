@@ -42,3 +42,10 @@ jQuery("#area").slider({
 		jQuery("#max-price").val(jQuery("#price").slider("values",1));
     }
 });
+
+$( document ).ready(function() {
+	$('.room-list li').click(function() {
+	    $('.room-list li').removeClass('active');
+	    $(this).addClass('active');
+  	});
+})
