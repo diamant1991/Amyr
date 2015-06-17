@@ -254,82 +254,185 @@
 				<div class="select">
 					<a href="javascript:void(0);" class="slct">Новостройки</a>
 					<ul class="drop">
-						<li><a >Select 1</a></li>
-						<li><a >Select 2</a></li>
-						<li><a >Select 3</a></li>
-						<li><a >Select 4</a></li>
+						<li onclick="changeFilter(divsFilter,'.buildings'); return false;">Новостройки</li>
+						<li onclick="changeFilter(divsFilter,'.commercial'); return false;">Коммерческая недвижимость</li>
+						<li onclick="changeFilter(divsFilter,'.residential'); return false;">Загородная недвижимость</li>
 					</ul>
 					<input type="hidden" id="select" />
 				</div>
-				<div class="select area-slct">
-					<a href="javascript:void(0);" class="slct">Район</a>
-					<ul class="drop">
-						<li><a >Select 1</a></li>
-						<li><a >Select 2</a></li>
-						<li><a >Select 3</a></li>
-						<li><a >Select 4</a></li>
-					</ul>
-					<input type="hidden" id="select" />
-				</div>
-				<div class="select-item">
-					<p>Ремонт</p>
-					<div class="select">
-						<a href="javascript:void(0);" class="slct">Без отделки</a>
+				<div class="buildings">
+					<div class="select area-slct">
+						<a href="javascript:void(0);" class="slct">Район</a>
 						<ul class="drop">
-							<li><a >Select 1</a></li>
-							<li><a >Select 2</a></li>
-							<li><a >Select 3</a></li>
-							<li><a >Select 4</a></li>
+							<li>Select 1</li>
+							<li>Select 2</li>
+							<li>Select 3</li>
+							<li>Select 4</li>
 						</ul>
 						<input type="hidden" id="select" />
 					</div>
-				</div>
-				<div class="select-item">
-					<p>Комнатность</p>
-					<ul class="room-list clearfix">
-						<li>c</li>
-						<li>1</li>
-						<li>2</li>
-						<li class="active">3</li>
-						<li>4</li>
-						<li>5</li>
-					</ul>
-				</div>
-				<div class="select-item">
-					<p>Площадь, м.кв.</p>
-				 	 <div class="ui-item">
-				  		<span>от</span>
-				  	 	<input type="text" id="min-area">
-				  	 	<span style="padding-left:20px;">до</span>
-				        <input type="text" id="max-area">
-				     	<span style="padding-left:7px;">кв.м</span>
-				  	</div>
-					  
-					<div id="area"></div>
+					<div class="select-item">
+						<p>Ремонт</p>
+						<div class="select">
+							<a href="javascript:void(0);" class="slct">Без отделки</a>
+							<ul class="drop">
+								<li>Select 1</li>
+								<li>Select 2</li>
+								<li>Select 3</li>
+								<li>Select 4</li>
+							</ul>
+							<input type="hidden" id="select" />
+						</div>
+					</div>
+					<div class="select-item">
+						<p>Комнатность</p>
+						<ul class="room-list clearfix">
+							<li>c</li>
+							<li>1</li>
+							<li>2</li>
+							<li class="active">3</li>
+							<li>4</li>
+							<li>5</li>
+						</ul>
+					</div>
+					<div class="select-item">
+						<p>Площадь, м.кв.</p>
+					 	 <div class="ui-item">
+					  		<span>от</span>
+					  	 	<input type="text" id="min-area">
+					  	 	<span style="padding-left:20px;">до</span>
+					        <input type="text" id="max-area">
+					     	<span style="padding-left:7px;">кв.м</span>
+					  	</div>
+						  
+						<div id="area"></div>
 
-				</div>
-				<div class="select-item">
-					<p>Этаж</p>
-					<div class="ui-item">
-				  		<span>С</span>
-				  	 	<input type="text" id="min-floor">
-				  	 	<span style="padding-left:20px;">по</span>
-				        <input type="text" id="max-floor">
-				     	<span style="padding-left:7px;">этаж</span>
-				  	</div>
-				  	<div id="floor"></div>
-				</div>
-				<div class="select-item">
-					<p>Стоимость</p>
-					<div class="ui-item">
-				  		<span>С</span>
-				  	 	<input type="text" id="min-price">
-				  	 	<span style="padding-left:20px;">по</span>
-				        <input type="text" id="max-price">
-				     	<span style="padding-left:7px;">руб.</span>
-				  	</div>
-				  	<div id="price"></div>
-				</div>
+					</div>
+					<div class="select-item">
+						<p>Этаж</p>
+						<div class="ui-item">
+					  		<span>С</span>
+					  	 	<input type="text" id="min-floor">
+					  	 	<span style="padding-left:20px;">по</span>
+					        <input type="text" id="max-floor">
+					     	<span style="padding-left:7px;">этаж</span>
+					  	</div>
+					  	<div id="floor"></div>
+					</div>
+					<div class="select-item">
+						<p>Стоимость</p>
+						<div class="ui-item">
+					  		<span>С</span>
+					  	 	<input type="text" id="min-price">
+					  	 	<span style="padding-left:20px;">по</span>
+					        <input type="text" id="max-price">
+					     	<span style="padding-left:7px;">руб.</span>
+					  	</div>
+					  	<div id="price"></div>
+					</div>
+				</div><!-- buildings-->
+
+				<div class="commercial">
+					<div class="select area-slct">
+						<a href="javascript:void(0);" class="slct">Район</a>
+						<ul class="drop">
+							<li>Select 1</li>
+							<li>Select 2</li>
+							<li>Select 3</li>
+							<li>Select 4</li>
+						</ul>
+						<input type="hidden" id="select" />
+					</div>
+					<div class="select-item">
+						<p>Ремонт</p>
+						<div class="select">
+							<a href="javascript:void(0);" class="slct">Без отделки</a>
+							<ul class="drop">
+								<li>Select 1</li>
+								<li>Select 2</li>
+								<li>Select 3</li>
+								<li>Select 4</li>
+							</ul>
+							<input type="hidden" id="select" />
+						</div>
+					</div>
+					<div class="select-item">
+						<p>Тип здания</p>
+						<div class="select">
+							<a href="javascript:void(0);" class="slct">Без отделки</a>
+							<ul class="drop">
+								<li>Select 1</li>
+								<li>Select 2</li>
+								<li>Select 3</li>
+								<li>Select 4</li>
+							</ul>
+							<input type="hidden" id="select" />
+						</div>
+					</div>
+					<div class="select-item">
+						<p>Площадь, м.кв.</p>
+					 	 <div class="ui-item">
+					  		<span>от</span>
+					  	 	<input type="text" id="min-area-сommercial">
+					  	 	<span style="padding-left:20px;">до</span>
+					        <input type="text" id="max-area-сommercial">
+					     	<span style="padding-left:7px;">кв.м</span>
+					  	</div>
+						  
+						<div id="area-сommercial"></div>
+
+					</div>
+					<div class="select-item">
+						<p>Стоимость</p>
+						<div class="ui-item">
+					  		<span>С</span>
+					  	 	<input type="text" id="min-price-commercial">
+					  	 	<span style="padding-left:20px;">по</span>
+					        <input type="text" id="max-price-commercial">
+					     	<span style="padding-left:7px;">руб.</span>
+					  	</div>
+					  	<div id="price-commercial"></div>
+					</div>
+
+				</div><!-- commercial-->
+
+				<div class="residential">
+					<div class="select area-slct">
+						<a href="javascript:void(0);" class="slct">Район</a>
+						<ul class="drop">
+							<li>Select 1</li>
+							<li>Select 2</li>
+							<li>Select 3</li>
+							<li>Select 4</li>
+						</ul>
+						<input type="hidden" id="select" />
+					</div>
+					<div class="select-item">
+						<p>Площадь в сотках</p>
+					 	 <div class="ui-item">
+					  		<span>от</span>
+					  	 	<input type="text" id="min-area-residential">
+					  	 	<span style="padding-left:20px;">до</span>
+					        <input type="text" id="max-area-residential">
+					     	<span style="padding-left:7px;">кв.м</span>
+					  	</div>
+						  
+						<div id="area-residential"></div>
+
+					</div>
+					<div class="select-item">
+						<p>Цена за участок</p>
+						<div class="ui-item">
+					  		<span>С</span>
+					  	 	<input type="text" id="min-price-residential">
+					  	 	<span style="padding-left:20px;">по</span>
+					        <input type="text" id="max-price-residential">
+					     	<span style="padding-left:7px;">руб.</span>
+					  	</div>
+					  	<div id="price-residential"></div>
+					</div>
+				</div><!-- residential-->
+					
 			</div><!-- filter -->
 			<button class="find-btn">Найти</button>
 			<div class="news">
